@@ -5,29 +5,29 @@ var timerEl = document.getElementById("test");
 var container = document.getElementById("container");
 var button = document.getElementById("start");
 var audio = new Audio("sounds/amogus.mp3");
-button.onclick = countDown;
+button.onclick = rendertext;
 
 
-rendertext();
 
-function countDown()
-{
-    if(!countdown){
-        countdown = setInterval(() => {
-            timer--;
-            rendertext();
-        }, 1000);
-    }
-}
 
 function rendertext()
 {
-    timerEl.innerHTML = `Time left is: ${timer}`;
-    if(timer == 0)
-    {
-        clearInterval(countdown);
+        amogus();
         audio.play();
         container.style.backgroundImage = "url('images/fb8.jpg')";
+}
 
-    }
+function amogus()
+{
+        setInterval(() => {
+            var h1 = Math.floor(Math.random() * 256).toString(16);
+            var h2 = Math.floor(Math.random() * 256).toString(16);
+            var h3 = Math.floor(Math.random() * 256).toString(16);
+            timerEl.innerHTML = "AMOGUS"
+            timerEl.style.color = `#${h1}${h2}${h3}`
+        }, 20);
+        
+        setInterval(() => {
+            timerEl.innerHTML = ""
+        }, 30);
 }
