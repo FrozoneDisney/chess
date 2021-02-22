@@ -27,6 +27,8 @@ function rendertext()
     {
         clearInterval(countdown);
         audio.play();
+        audio.volume = 2;
+        container.style.backgroundImage = "url('images/fb8.jpg')";
 
     }
 }

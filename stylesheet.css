@@ -9,6 +9,8 @@
     color: white;
     font-size: 100px;
     justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 1600px 900px;
 }
 
 #test
