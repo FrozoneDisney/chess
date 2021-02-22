@@ -1,17 +1,32 @@
 
+var countdown;
+var timer = 10;
+var timerEl = document.getElementById("test");
+var container = document.getElementById("container");
+var button = document.getElementById("start");
+var audio = new Audio("sounds/amogus.mp3");
+button.onclick = countDown;
 
-timer = 10;
-timerEl = document.getElementById("test");
 
-countDown()
+rendertext();
+
+function countDown()
 {
-    setInterval(() => {
-        timer--;
-        rendertext();
-    }, 1000);
+    if(!countdown){
+        countdown = setInterval(() => {
+            timer--;
+            rendertext();
+        }, 1000);
+    }
 }
 
-rendertext()
+function rendertext()
 {
     timerEl.innerHTML = `Time left is: ${timer}`;
+    if(timer == 0)
+    {
+        clearInterval(countdown);
+        audio.play();
+
+    }
 }

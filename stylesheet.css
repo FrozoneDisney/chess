@@ -1,0 +1,28 @@
+#container
+{ 
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: black;
+    width: 1600px;
+    height: 900px;
+    color: white;
+    font-size: 100px;
+    justify-content: center;
+}
+
+#test
+{
+    margin-bottom: 100px;
+    width: 700px;
+    height: 100px;
+    align-self: center;
+}
+
+#start
+{
+    align-self: center;
+    height: 100px;
+    width: 300px;
+    background-color: brown;
+}
